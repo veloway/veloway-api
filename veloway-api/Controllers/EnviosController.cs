@@ -1,5 +1,6 @@
 ﻿using Core.DTOs;
 using Mapster;
+using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
 
@@ -10,8 +11,10 @@ namespace veloway_api.Controllers
     public class EnviosController : Controller
     {
         private readonly IEnvioService envioService;
-        public EnviosController(IEnvioService envioService)
+        private readonly IMapper mapper;
+        public EnviosController(IEnvioService envioService, IMapper mapper)
         {
+            this.mapper = mapper;
             this.envioService = envioService;
         }
 

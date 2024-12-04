@@ -4,9 +4,9 @@ using Mapster;
 
 namespace veloway_api
 {
-    public class ConfigureMapster
+    public static class MapsterConfig
     {
-        public static void ConfigureMapping()
+        public static void Configure()
         {
             // Mapeo de Envio a EnvioDTO
             TypeAdapterConfig<Envio, EnvioDTO>.NewConfig()
